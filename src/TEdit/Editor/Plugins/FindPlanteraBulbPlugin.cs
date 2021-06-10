@@ -25,7 +25,7 @@ namespace TEdit.Editor.Plugins
             {
                 for (int y = 0; y < _wvm.CurrentWorld.TilesHigh; y++)
                 {
-                    // Check if a tile is a chest
+                    // Check if a tile is a plantera bulb
                     if (_wvm.CurrentWorld.Tiles[x, y].Type == (int)TileType.PlanteraBulb)
                     {
                         if (!findConnectedTitle(locations, x, y))
@@ -41,6 +41,7 @@ namespace TEdit.Editor.Plugins
             resultView.Show();
         }
 
+        // Check a location is not simply another part of an already discovered bulb
         protected bool findConnectedTitle(List<Vector2> locations, int x, int y)
         {
             Vector2 position;

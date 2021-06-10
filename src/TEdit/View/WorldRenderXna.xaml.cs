@@ -2293,7 +2293,7 @@ namespace TEdit.View
                     }
                     catch (Exception ex)
                     {
-                        // failed to render tile? log?
+                        ErrorLogging.Log($"Failed to render a tile. Exception: {ex.Message}");
                     }
                 }
             }
